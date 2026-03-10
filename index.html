@@ -53,9 +53,9 @@
         .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
         .menu-toggle span { width: 30px; height: 3px; background: var(--cor-primaria); border-radius: 5px; }
 
-        /* SEÇÃO HERO */
+        /* SEÇÃO HERO COM EFEITO DE AFASTAMENTO */
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./A1.jpeg') no-repeat center/cover; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./img/a1.jpeg') no-repeat center/cover; 
             height: 80vh; 
             display: flex; 
             align-items: center; 
@@ -63,7 +63,16 @@
             color: white; 
             text-align: center; 
             padding: 0 20px;
+            /* Aplicação da animação */
+            animation: zoomOut 10s ease-in-out infinite alternate;
         }
+
+        /* Definição do efeito de afastar */
+        @keyframes zoomOut {
+            from { background-size: 115%; }
+            to { background-size: 100%; }
+        }
+
         .hero h1 { font-size: 3rem; margin-bottom: 10px; }
 
         /* SERVIÇOS */
@@ -89,6 +98,11 @@
             nav ul.active { display: flex; }
             nav ul li { margin: 10px 0; }
             .hero h1 { font-size: 2rem; }
+            /* Ajuste da animação para mobile para evitar quebra de layout */
+            @keyframes zoomOut {
+                from { background-size: cover; background-size: 130%; }
+                to { background-size: cover; background-size: 110%; }
+            }
         }
     </style>
 </head>
@@ -135,17 +149,17 @@
         </div>
         <div class="card">
             <img src="./ANTES DEPOIS.webp" alt="Lavagem">
-            <h3>Pintura interna e externa</h3>
+            <h3>Pintura Decorativa e Proteção</h3>
             <p>Limpeza profissional utilizando produtos biodegradáveis que não agridem o meio ambiente.</p>
         </div>
         <div class="card">
                 <video width="100%" controls autoplay muted src="./img/video2.mp4"></video>
-            <h3>Tratamento de Trincas</h3>
+            <h3>Acabamentos Especiais e Texturas</h3>
             <p>Veja video do ultimo trabalho.</p>
         </div>
         <div class="card">
             <video width="100%" controls autoplay muted src="./img/video1.mp4"></video>
-            <h3>Impermeabilização</h3>
+            <h3>Acabamentos Especiais e Texturas</h3>
             <p>Veja video do ultimo trabalho</p>
         </div>
     </div>
