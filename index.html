@@ -117,6 +117,36 @@
                 to { background-size: cover; background-size: 110%; }
             }
         }
+        /* ESTILIZAÇÃO DO PORTFÓLIO */
+.galeria-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.galeria-portfolio img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Faz a imagem preencher o quadrado sem distorcer */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.galeria-portfolio img:hover {
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    .galeria-portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    .galeria-portfolio img {
+        height: 180px;
+    }
+}
     </style>
 </head>
 <body>
@@ -175,8 +205,61 @@
             <h3>Comercial</h3>
             <p>Lojas, escritórios e galpões</p>
         </div>
+        <div class="card">
+            <video width="100%" controls autoplay muted src="./img/video5.mp4"></video>
+            <h3>Residencial Antes</h3>
+            
+        </div>
+         <div class="card">
+            <video width="100%" controls autoplay muted src="./img/video4.mp4"></video>
+            <h3>Residencial Depois</h3>
+            
+        </div>
+         <div class="card">
+            <video width="100%" controls autoplay muted src="./img/video6.mp4"></video>
+            <h3>Residencial Depois</h3>
+            
+        </div>
+         
     </div>
 </section>
+
+<section id="portfolio" style="padding: 50px 5%; text-align: center; background-color: #ffffff;">
+    <h2 style="color: var(--cor-primaria); margin-bottom: 30px;">NOSSO PORTFÓLIO</h2>
+    <div class="galeria-portfolio">
+        <img src="./img/trabalho1.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho2.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho3.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho4.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho5.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho6.jpeg" alt="Serviço de Pintura Trindade">
+         <img src="./img/trabalho7.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho8.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho9.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho10.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho11.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho12.jpeg" alt="Serviço de Pintura Trindade">
+         <img src="./img/trabalho13.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho14.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho15.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho16.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho17.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho18.jpeg" alt="Serviço de Pintura Trindade">
+         <img src="./img/trabalho19.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho20.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho21.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho22.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho23.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho24.jpeg" alt="Serviço de Pintura Trindade">
+         <img src="./img/trabalho25.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho26.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho27.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho28.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho29.jpeg" alt="Serviço de Pintura Trindade">
+        <img src="./img/trabalho30.jpeg" alt="Serviço de Pintura Trindade">
+    </div>
+</section>
+
 
 <section id="sobre">
     <h2>Sobre a Trindade Pinturas</h2>
@@ -186,6 +269,9 @@
 <footer id="contato">
     <p><strong>Trindade Pinturas</strong></p>
     <p>Telefones: (11) 978894558 | Profissional José Carlos</p>
+  <a href="https://www.youtube.com/@trindadepinturas"> <p>youtube |@trindadepinturas</p></a> 
+   <a href="https://www.youtube.com/@trindadepinturas"> <p>instagram |@trindadepinturasjc</p></a> 
+    
     <p>Endereço: São Paulo - SP</p>
     <p>© 2026 Trindade Pinturas - Todos os direitos reservados.</p>
 </footer>
